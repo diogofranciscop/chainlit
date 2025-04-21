@@ -9,6 +9,7 @@ import { useSidebar } from '@/components/ui/sidebar';
 
 import ApiKeys from './ApiKeys';
 import ChatProfiles from './ChatProfiles';
+import FormsButton from './Forms';
 import NewChatButton from './NewChat';
 import ReadmeButton from './Readme';
 import SidebarTrigger from './SidebarTrigger';
@@ -60,6 +61,7 @@ const Header = memo(() => {
 
       <div />
       <div className="flex items-center gap-1">
+        <FormsButton />
         <ReadmeButton />
         <ApiKeys />
         {links &&

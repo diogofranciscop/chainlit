@@ -9,11 +9,11 @@ import { useTheme } from './ThemeProvider';
 
 export default function WaterMark() {
   const { variant } = useTheme();
-  const Logo = variant === 'light' ? LogoLight : LogoDark;
+  const _Logo = variant === 'light' ? LogoLight : LogoDark;
 
   return (
     <a
-      href="https://chainlit.io"
+      href="https://www.timestampgroup.com/en"
       target="_blank"
       className="watermark"
       style={{
@@ -25,14 +25,15 @@ export default function WaterMark() {
       <div className="text-xs text-muted-foreground">
         <Translator path="chat.watermark" />
       </div>
-      <Logo
+      <p>Timestamp</p>
+      {/* <Logo
         style={{
           width: 65,
           height: 'auto',
           filter: 'grayscale(1)',
           marginLeft: '4px'
         }}
-      />
+      />*/}
     </a>
   );
 }
