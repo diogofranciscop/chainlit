@@ -24,7 +24,6 @@ export default function FormsButton() {
       <DialogTrigger asChild>
         <Button id="forms-button" variant="outline">
           <Translator path="navigation.header.forms" />{' '}
-          {/* Update translation key */}
         </Button>
       </DialogTrigger>
       <DialogContent className="flex flex-col h-screen w-screen max-w-screen max-h-screen border-none !rounded-none overflow-y-auto">
@@ -35,11 +34,9 @@ export default function FormsButton() {
           <DialogHeader>
             <DialogTitle>
               <Translator path="navigation.header.forms" />{' '}
-              {/* Update translation key */}
             </DialogTitle>
           </DialogHeader>
 
-          {/* Replace Markdown with your Form component */}
           <FormsComponent />
         </div>
       </DialogContent>
