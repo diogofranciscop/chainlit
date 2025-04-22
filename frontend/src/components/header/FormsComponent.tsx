@@ -1,4 +1,4 @@
-export function YourFormComponent() {
+export function FormsComponent() {
   return (
     <form className="space-y-4">
       <input

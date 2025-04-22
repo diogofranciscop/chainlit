@@ -13,7 +13,7 @@ import { Translator } from 'components/i18n';
 import { useLayoutMaxWidth } from 'hooks/useLayoutMaxWidth';
 
 // Add your form component
-import { YourFormComponent } from './YourFormComponent';
+import { FormsComponent } from './FormsComponent';
 
 export default function FormsButton() {
   const { _config } = useConfig();
@@ -40,7 +40,7 @@ export default function FormsButton() {
           </DialogHeader>
 
           {/* Replace Markdown with your Form component */}
-          <YourFormComponent />
+          <FormsComponent />
         </div>
       </DialogContent>
     </Dialog>
