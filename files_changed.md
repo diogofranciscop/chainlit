@@ -1,8 +1,6 @@
-In order to make the chainlit based UI for a chatbot with a page where the user can access their own forms we made a fork of the chainlit repo. 
+In order to adress the limitations of chainlit in terms of UI we made a fork of the repo.
 
-In order to achieve these we replaced the existing "README" button to a forms button.
-
-The changed/new files are:
+The changed/new files in relation to the original [chainlit](https://github.com/Chainlit/chainlit) are:
     [new-files]
     - frontend/src/components/header/FormsButton.tsx
     - frontend/src/components/header/FormsComponent.tsx
@@ -13,3 +11,5 @@ The changed/new files are:
     - frontend/src/components/WaterMark.tsx
     - frontend/src/pages/Page.tsx
     - frontend/src/router.tsx
+
+So there are possible conflits in those files when updating the repo with a merge from the upstream.
