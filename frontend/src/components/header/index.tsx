@@ -8,10 +8,10 @@ import ButtonLink from '@/components/ButtonLink';
 import { useSidebar } from '@/components/ui/sidebar';
 
 import ApiKeys from './ApiKeys';
+import ChatButton from './ChatButton';
 import ChatProfiles from './ChatProfiles';
-import FormsButton from './Forms';
+import FormsButton from './FormsButton';
 import NewChatButton from './NewChat';
-import ReadmeButton from './Readme';
 import SidebarTrigger from './SidebarTrigger';
 import { ThemeToggle } from './ThemeToggle';
 import UserNav from './UserNav';
@@ -58,11 +58,55 @@ const Header = memo(() => {
           />
         ) : null}
       </div>
-
       <div />
       <div className="flex items-center gap-1">
+        <ChatButton />
         <FormsButton />
-        <ReadmeButton />
+
+        <ApiKeys />
+        {links &&
+          links.map((link, index) => (
+            <ButtonLink
+              key={`${link.name}-${link.url}-${index}`}
+              name={link.name}
+              displayName={link.display_name}
+              iconUrl={link.icon_url}
+              url={link.url}
+            />
+          ))}
+        <ThemeToggle />
+        <UserNav />
+      </div>
+    </div>
+  );
+});
+
+const Header2 = memo(() => {
+  const { audioConnection } = useAudio();
+  const { config } = useConfig();
+  const links = config?.ui?.header_links || [];
+
+  return (
+    <div
+      className="p-3 flex h-[60px] items-center justify-between gap-2 relative"
+      id="header"
+    >
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        {audioConnection === 'on' ? (
+          <AudioPresence
+            type="server"
+            height={35}
+            width={70}
+            barCount={4}
+            barSpacing={2}
+          />
+        ) : null}
+      </div>
+      <div />
+      <div className="flex items-center gap-1">
+        <ChatButton />
+        <FormsButton />
+
         <ApiKeys />
         {links &&
           links.map((link, index) => (
@@ -82,3 +126,4 @@ const Header = memo(() => {
 });
 
 export { Header };
+export { Header2 };

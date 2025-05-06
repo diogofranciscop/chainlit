@@ -4,7 +4,12 @@ In order to achieve these we replaced the existing "README" button to a forms bu
 
 The changed/new files are:
     [new-files]
-    - frontend/src/components/header/Forms.tsx
+    - frontend/src/components/header/FormsButton.tsx
+    - frontend/src/components/header/FormsComponent.tsx
+    - frontend/src/components/header/ChatButton.tsx
+    - frontend/src/pages/Forms.tsx
     [changed-files]
     - frontend/src/components/header/index.tsx
     - frontend/src/components/WaterMark.tsx
+    - frontend/src/pages/Page.tsx
+    - frontend/src/router.tsx

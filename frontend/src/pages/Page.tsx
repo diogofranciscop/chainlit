@@ -7,6 +7,7 @@ import ElementSideView from '@/components/ElementSideView';
 import LeftSidebar from '@/components/LeftSidebar';
 import { TaskList } from '@/components/Tasklist';
 import { Header } from '@/components/header';
+import { Header2 } from '@/components/header';
 import { ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 
@@ -30,7 +31,8 @@ const Page = ({ children }: Props) => {
 
   const mainContent = (
     <div className="flex flex-col h-full w-full">
-      <Header />
+      {location.pathname === '/' && <Header />}
+      {location.pathname === '/Forms' && <Header2 />}
       <ResizablePanelGroup
         direction="horizontal"
         className="flex flex-row flex-grow"
