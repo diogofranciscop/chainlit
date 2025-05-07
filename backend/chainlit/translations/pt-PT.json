@@ -1,0 +1,216 @@
+{
+    "common": {
+        "actions": {
+            "cancel": "Cancelar",
+            "confirm": "Confirmar",
+            "continue": "Continuar",
+            "goBack": "Voltar Atrás",
+            "reset": "Reiniciar",
+            "submit": "Submeter"
+        },
+        "status": {
+            "loading": "A carregar...",
+            "error": {
+                "default": "Um erro ocorreu",
+                "serverConnection": "Não foi possivel aceder ao servidor"
+            }
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Iniciar sessão para aceder à app",
+            "form": {
+                "email": {
+                    "label": "Endereço de Email",
+                    "required": "email é um campo obrigatório"
+                },
+                "password": {
+                    "label": "Palavra-Passe",
+                    "required": "palavra-passe é um campo obrigatório"
+                },
+                "actions": {
+                    "signin": "Iniciar Sessão"
+                },
+                "alternativeText": {
+                    "or": "OU"
+                }
+            },
+            "errors": {
+                "default": "Não foi possivel iniciar sessão",
+                "signin": "Tenta iniciar sessão com uma conta difrente",
+                "oauthSignin": "Tenta iniciar sessão com uma conta difrente",
+                "redirectUriMismatch": "O URI de redireccionamento não está a corresponder à configuração da aplicação oauth",
+                "oauthCallback": "Tenta iniciar sessão com uma conta difrente",
+                "oauthCreateAccount": "Tenta iniciar sessão com uma conta difrente",
+                "emailCreateAccount": "Tenta iniciar sessão com uma conta difrente",
+                "callback": "Tenta iniciar sessão com uma conta difrente",
+                "oauthAccountNotLinked": "Para confirmar a tua identidade, inicia sessão com a mesma conta que utilizaste inicialmente",
+                "emailSignin": "O e-mail não foi possivel de ser enviado",
+                "emailVerify": "Verifica o teu e-mail, foi enviado um novo e-mail",
+                "credentialsSignin": "O registo falhou. Verifica se os dados fornecidos estão corretos",
+                "sessionRequired": "Iniciar sessão para aceder a esta página"
+            }
+        },
+        "provider": {
+            "continue": "Continua com {{provider}}"
+        }
+    },
+    "chat": {
+        "input": {
+            "placeholder": "Escreve a tua mensagem aqui...",
+            "actions": {
+                "send": "Enviar mensagem",
+                "stop": "Parar tarefa",
+                "attachFiles": "Adicionar Ficheiros"
+            }
+        },
+        "speech": {
+            "start": "Começar a gravar",
+            "stop": "Parar de gravar",
+            "connecting": "A conectar"
+        },
+        "fileUpload": {
+            "dragDrop": "Arrastar e largar ficheiros aqui",
+            "browse": "Pesquisar ficheiros",
+            "sizeLimit": "Limite:",
+            "errors": {
+                "failed": "Falha no carregamento",
+                "cancelled": "Carregamento cancelado de"
+            }
+        },
+        "messages": {
+            "status": {
+                "using": "A pesquisar por colaboradores",
+                "used": "Resultados"
+            },
+            "actions": {
+                "copy": {
+                    "button": "Copiar para a área de tranferência",
+                    "success": "Copiado!"
+                }
+            },
+            "feedback": {
+                "positive": "Útil",
+                "negative": "Não é útil",
+                "edit": "Editar feedback",
+                "dialog": {
+                    "title": "Adicionar comentário",
+                    "submit": "Submeter feedback"
+                },
+                "status": {
+                    "updating": "A atualizar",
+                    "updated": "Feedback atualizado"
+                }
+            }
+        },
+        "history": {
+            "title": "Últimos Inputs",
+            "empty": "Está vazio...",
+            "show": "Mostrar histórico"
+        },
+        "settings": {
+            "title": "Painel de definições"
+        },
+        "watermark": "Desenvolvido Por"
+    },
+    "threadHistory": {
+        "sidebar": {
+            "title": "Conversas Anteriores",
+            "filters": {
+                "search": "Pesquisar",
+                "placeholder": "A pesquisar conversas..."
+            },
+            "timeframes": {
+                "today": "Hoje",
+                "yesterday": "Ontem",
+                "previous7days": "Últimos 7 dias",
+                "previous30days": "Últimos 30 dias"
+            },
+            "empty": "Não foram encontrados tópicos",
+            "actions": {
+                "close": "Fechar sidebar",
+                "open": "Abrir sidebar"
+            }
+        },
+        "thread": {
+            "untitled": "Conversa sem titulo",
+            "menu": {
+                "rename": "Renomear",
+                "delete": "Eliminar"
+            },
+            "actions": {
+                "delete": {
+                    "title": "Confirmar a eliminação",
+                    "description": "Esta ação elimina o tópico, bem como as suas mensagens e elementos. Esta ação não pode ser anulada",
+                    "success": "Conversa eliminada",
+                    "inProgress": "A eliminar conversa"
+                },
+                "rename": {
+                    "title": "Renomear Tópico",
+                    "description": "Introduzir um novo nome para este tópico",
+                    "form": {
+                        "name": {
+                            "label": "Nome",
+                            "placeholder": "Escrever novo nome..."
+                        }
+                    },
+                    "success": "Tópico renomeado!",
+                    "inProgress": "A Renomear tópico"
+                }
+            }
+        }
+    },
+    "navigation": {
+        "header": {
+            "chat": "Chat",
+            "forms": "Formulário",
+            "home": "Chatbot",
+            "readme": "README",
+            "theme": {
+                "light": "Tema Claro",
+                "dark": "Tema Escuro",
+                "system": "Seguir Sistema"
+            }
+        },
+        "newChat": {
+            "button": "Nova Conversa",
+            "dialog": {
+                "title": "Criar Nova Conversa",
+                "description": "Isso vai limpar o histórico da conversa atual. Tens a certeza que queres continuar?",
+                "tooltip": "Nova Conversa"
+            }
+        },
+        "user": {
+            "menu": {
+                "settings": "Configurações",
+                "settingsKey": "S",
+                "apiKeys": "API chaves",
+                "logout": "Sair"
+            }
+        }
+    },
+    "apiKeys": {
+        "title": "As API chaves são precisas",
+        "description": "Para usar esta aplicação, a seguinte API chave é precisa. As chaves são armazenadas no teu armazenamento local do teu dispositivo",
+        "success": {
+            "saved": "Guardado com sucesso"
+        }
+    },
+    "alerts": {
+        "info": "Informação",
+        "note": "Nota",
+        "tip": "Conselho",
+        "important": "Importante",
+        "warning": "Aviso",
+        "caution": "Cuidado",
+        "debug": "Debug",
+        "example": "Exemplo",
+        "success": "Sucesso",
+        "help": "Ajuda",
+        "idea": "Ideia",
+        "pending": "Aguardar",
+        "security": "Segurança",
+        "beta": "Beta",
+        "best-practice": "Melhores Práticas"
+    }
+  }

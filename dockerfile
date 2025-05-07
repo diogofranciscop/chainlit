@@ -9,9 +9,6 @@ RUN apt-get update && \
     npm install -g pnpm && \
     pip install poetry
 
-COPY frontend/ .
-COPY package.json pnpm-lock.yaml ./
-
 WORKDIR /app/backend
 
 COPY backend/ .  
@@ -20,4 +17,4 @@ RUN poetry install --with tests,mypy,dev --no-root
 
 EXPOSE 8000
 
-CMD ["poetry", "run", "chainlit", "run", "chainlit/hello.py", "--host", "0.0.0.0"]
+CMD ["poetry", "run", "chainlit", "run", "chainlit/app.py", "--host", "0.0.0.0"]
