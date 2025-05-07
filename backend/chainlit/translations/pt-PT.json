@@ -185,7 +185,7 @@
                 "settings": "Configurações",
                 "settingsKey": "S",
                 "apiKeys": "API chaves",
-                "logout": "Sair"
+                "logout": "Terminar sessão"
             }
         }
     },
