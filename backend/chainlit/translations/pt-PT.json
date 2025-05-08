@@ -176,7 +176,7 @@
             "button": "Nova Conversa",
             "dialog": {
                 "title": "Criar Nova Conversa",
-                "description": "Isso vai limpar o histórico da conversa atual. Tens a certeza que queres continuar?",
+                "description": "Isto vai limpar o histórico da conversa atual. Tens a certeza que queres continuar?",
                 "tooltip": "Nova Conversa"
             }
         },

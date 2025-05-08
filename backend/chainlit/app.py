@@ -18,68 +18,53 @@ async def main(message: cl.Message):
     """
     This function shows 'A pensar...' then updates the step to 'Resultados encontrados!'
     """
-    # Create a new step with "A pensar..."
     async with cl.Step(name="") as step:
         await cl.sleep(2)
-        step.output = "world"
-
-    # Instead of sending all cards at once, we'll send them individually with custom messages between them
-
-    # Create three different person data objects - make each unique
+        step.input = "world"
+    # Simulating the generating of the 3 people
     people = [
         {
-            "name": "Aditi Verma",
+            "name": "João Silva",
             "role": "UI/UX Designer",
-            "email": "aditi.verma@gfg.com",
-            "phone": "+91-98775677",
-            "location": "Delhi, DL",
-            "linkedin": "#",
-            "github": "#",
-            "id": "person1",  # Add unique ID for each person
+            "email": "joão.silva@semapa.com",
+            "phone": "+351 912 345 234",
+            "id": "person1",
         },
         {
-            "name": "Rahul Sharma",
+            "name": "Raul Esteves",
             "role": "Frontend Developer",
-            "email": "rahul.sharma@gfg.com",
-            "phone": "+91-98775678",
-            "location": "Mumbai, MH",
-            "linkedin": "#",
-            "github": "#",
-            "id": "person2",  # Add unique ID for each person
+            "email": "raul.estevesa@semapa.com",
+            "phone": "+351 932 341 324",
+            "id": "person2",
         },
         {
-            "name": "Priya Singh",
+            "name": "Pedro Fernandes",
             "role": "Backend Developer",
-            "email": "priya.singh@gfg.com",
-            "phone": "+91-98775679",
-            "location": "Bangalore, KA",
-            "linkedin": "#",
-            "github": "#",
-            "id": "person3",  # Add unique ID for each person
+            "email": "pedro.fenandes@semapa.com",
+            "phone": "+351 923 423 123",
+            "id": "person3",
         },
     ]
 
-    # Send first card
     card1 = cl.CustomElement(name="ContactCard", props=people[0])
-    await cl.Message(content="Here is our UI/UX designer:", elements=[card1]).send()
-
-    # Custom phrase between first and second card
     await cl.Message(
-        content="Next, we have a frontend developer who can help with your website:"
+        content="Aqui está o nosso UI/UX designer:", elements=[card1]
     ).send()
 
-    # Send second card
+    await cl.Message(
+        content="Aqui tens a pessoa responsável pelo desenvolvimento do frontend do nosso website:"
+    ).send()
+
     card2 = cl.CustomElement(name="ContactCard", props=people[1])
-    await cl.Message(content="Our frontend expert:", elements=[card2]).send()
-
-    # Custom phrase between second and third card
     await cl.Message(
-        content="Finally, for backend infrastructure, we recommend:"
+        content="O nosso desenvolvedor de frontend:", elements=[card2]
     ).send()
 
-    # Send third card
     card3 = cl.CustomElement(name="ContactCard", props=people[2])
-    await cl.Message(content="Our backend specialist:", elements=[card3]).send()
+    await cl.Message(
+        content="Se precisares de ajuda com o a infraestutura do backend:",
+        elements=[card3],
+    ).send()
 
 
 @cl.set_starters

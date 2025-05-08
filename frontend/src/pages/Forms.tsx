@@ -1,11 +1,11 @@
 import Page from 'pages/Page';
 
-import { FormsComponent } from '@/components/header/FormsComponent';
+import { Forms } from '@/components/forms';
 
 export default function Home() {
   return (
     <Page>
-      <FormsComponent />
+      <Forms />
     </Page>
   );
 }

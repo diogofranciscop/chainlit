@@ -1,15 +1,7 @@
 import React from 'react';
 
 // Instead of using react-icons, let's use simple HTML/CSS for icons
-const ContactCard = ({
-  name,
-  role,
-  email,
-  phone,
-  location,
-  linkedin,
-  github
-}) => {
+const ContactCard = ({ name, role, email, phone }) => {
   return (
     <div
       className="relative bg-white rounded-lg shadow-lg p-6 max-w-xs 
@@ -23,33 +15,14 @@ const ContactCard = ({
 
       <div className="text-gray-700">
         <p className="flex items-center mb-2">
-          <span className="text-blue-500 mr-2">✉️</span> {props.email}
+          <a className="text-blue-500 mr-2" href={`mailto:${props.email}`}>
+            ✉️
+          </a>{' '}
+          {props.email}
         </p>
         <p className="flex items-center mb-2">
           <span className="text-blue-500 mr-2">📞</span> {props.phone}
         </p>
-        <p className="flex items-center mb-2">
-          <span className="text-blue-500 mr-2">📍</span> {props.location}
-        </p>
-      </div>
-
-      <div className="flex justify-center space-x-4 mt-4">
-        <a
-          href={props.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 mr-4 hover:text-blue-700"
-        >
-          LinkedIn
-        </a>
-        <a
-          href={props.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-700 hover:text-gray-900"
-        >
-          GitHub
-        </a>
       </div>
     </div>
   );
