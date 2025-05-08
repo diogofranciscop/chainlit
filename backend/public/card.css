@@ -1,0 +1,37 @@
+.card {
+    border-radius: 25px;
+    position: relative;
+    padding: 25px 15px;
+    background-color: #81ecec;
+    margin: 50px 0;
+    height: 200px;
+    width:250px;
+    box-shadow: 0 2px 5px #ccc;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top {
+    border-radius: 25px 25px 0 0;
+    height: 100px;
+    width: 100%;
+    background-color: #00cec9;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .name {
+    font-size: 2em;
+    color: #2d3436;
+    display: flex;
+  }
+  
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
