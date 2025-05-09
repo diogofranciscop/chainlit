@@ -1,10 +1,11 @@
 import getRouterBasename from '@/lib/router';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
 
+import LandingPage from './pages/Landing';
 import AuthCallback from 'pages/AuthCallback';
 import Element from 'pages/Element';
 import Env from 'pages/Env';
-import Forms from 'pages/Forms';
+import FormsPage from 'pages/Forms';
 import Home from 'pages/Home';
 import Login from 'pages/Login';
 import Thread from 'pages/Thread';
@@ -16,8 +17,12 @@ export const router = createBrowserRouter(
       element: <Home />
     },
     {
+      path: '/landing',
+      element: <LandingPage />
+    },
+    {
       path: '/forms',
-      element: <Forms />
+      element: <FormsPage />
     },
     {
       path: '/env',

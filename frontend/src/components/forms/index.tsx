@@ -6,9 +6,9 @@ export function Forms() {
     <div className="flex justify-center w-screen">
       <form className="justify-center w-6/12">
         <Subtitle Subtitle="Informações Pessoais" />
-        <Input inputName="Nome" />
-        <Input inputName="Email" />
-        <Input inputName="Telemovel" />
+        <Input inputName="Nome" placeholderName="escreve o teu nome" />
+        <Input inputName="Email" placeholderName="exemplo@semapa.pt" />
+        <Input inputName="Telemovel" placeholderName="9XX XXX XXX" />
       </form>
     </div>
   );

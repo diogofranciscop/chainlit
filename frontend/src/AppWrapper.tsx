@@ -45,10 +45,11 @@ export default function AppWrapper() {
   if (
     isReady &&
     !isAuthenticated &&
-    window.location.pathname !== getRouterBasename() + '/login' &&
-    window.location.pathname !== getRouterBasename() + '/login/callback'
+    !['/login', '/login/callback', '/landing'].includes(
+      window.location.pathname.replace(getRouterBasename(), '')
+    )
   ) {
-    window.location.href = getRouterBasename() + '/login';
+    window.location.href = getRouterBasename() + '/landing';
   }
   return <App />;
 }
