@@ -14,6 +14,7 @@ import FormsButton from './FormsButton';
 import NewChatButton from './NewChat';
 import ReadmeButton from './Readme';
 import SidebarTrigger from './SidebarTrigger';
+import SwitchLangButton from './SwitchLang';
 import { ThemeToggle } from './ThemeToggle';
 import UserNav from './UserNav';
 
@@ -78,6 +79,7 @@ const Header = memo(() => {
         <ThemeToggle />
         <UserNav />
         <ReadmeButton />
+        <SwitchLangButton />
       </div>
     </div>
   );

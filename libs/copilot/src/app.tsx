@@ -27,7 +27,8 @@ export default function App({ widgetConfig }: Props) {
   const { isAuthenticated, data } = useAuth();
   const apiClient = useContext(ChainlitContext);
   const { i18n } = useTranslation();
-  const languageInUse = navigator.language || 'en-US';
+  const savedLang = localStorage.getItem('language');
+  const languageInUse = savedLang || navigator.language || 'en-US';
   const [authError, setAuthError] = useState<string>();
   const [fetchError, setFetchError] = useState<string>();
 

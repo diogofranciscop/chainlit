@@ -3,35 +3,61 @@ import App from 'App';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  useApi,
-  useAuth,
-  useChatInteract,
-  useConfig
-} from '@chainlit/react-client';
+import { useApi, useAuth, useChatInteract } from '@chainlit/react-client';
 
 export default function AppWrapper() {
   const [translationLoaded, setTranslationLoaded] = useState(false);
   const { isAuthenticated, isReady } = useAuth();
-  const { language: languageInUse } = useConfig();
   const { i18n } = useTranslation();
   const { windowMessage } = useChatInteract();
 
-  function handleChangeLanguage(languageBundle: any): void {
-    i18n.addResourceBundle(languageInUse, 'translation', languageBundle);
-    i18n.changeLanguage(languageInUse);
-  }
+  // State for selected language
+  const [selectedLanguage, setSelectedLanguage] = useState(() => {
+    return localStorage.getItem('language') || i18n.language || 'en';
+  });
 
+  // Fetch translations using selectedLanguage
   const { data: translations } = useApi<any>(
-    `/project/translations?language=${languageInUse}`
+    `/project/translations?language=${selectedLanguage}`
   );
 
+  // Apply the language bundle when fetched
   useEffect(() => {
-    if (!translations) return;
-    handleChangeLanguage(translations.translation);
-    setTranslationLoaded(true);
-  }, [translations]);
+    if (!translations) {
+      setTranslationLoaded(false); // Reset if translations are unloaded
+      return;
+    }
 
+    i18n.addResourceBundle(
+      selectedLanguage,
+      'translation',
+      translations.translation,
+      true, // deep merge
+      true // overwrite existing
+    );
+
+    // Ensure i18n uses the selected language
+    if (i18n.language !== selectedLanguage) {
+      i18n.changeLanguage(selectedLanguage);
+    }
+
+    setTranslationLoaded(true); // Mark translations as loaded
+  }, [translations, selectedLanguage, i18n]);
+
+  // Listen for language changes and update state
+  useEffect(() => {
+    const handleLanguageChange = (lang: string) => {
+      localStorage.setItem('language', lang);
+      setSelectedLanguage(lang);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
+
+  // Handle window messages
   useEffect(() => {
     const handleWindowMessage = (event: MessageEvent) => {
       windowMessage(event.data);
@@ -40,8 +66,7 @@ export default function AppWrapper() {
     return () => window.removeEventListener('message', handleWindowMessage);
   }, [windowMessage]);
 
-  if (!translationLoaded) return null;
-
+  // Redirect logic
   if (
     isReady &&
     !isAuthenticated &&
@@ -51,5 +76,9 @@ export default function AppWrapper() {
   ) {
     window.location.href = getRouterBasename() + '/landing';
   }
+
+  // Wait for translations before rendering the app
+  if (!translationLoaded) return null;
+
   return <App />;
 }
