@@ -4,7 +4,7 @@ interface InputProps {
 }
 export function Input({ inputName, placeholderName }: InputProps) {
   return (
-    <span className="font-semibold">
+    <span className="font-normal">
       {inputName}
       <input
         type="text"

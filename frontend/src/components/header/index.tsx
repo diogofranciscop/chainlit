@@ -12,6 +12,7 @@ import ChatButton from './ChatButton';
 import ChatProfiles from './ChatProfiles';
 import FormsButton from './FormsButton';
 import NewChatButton from './NewChat';
+import ReadmeButton from './Readme';
 import SidebarTrigger from './SidebarTrigger';
 import { ThemeToggle } from './ThemeToggle';
 import UserNav from './UserNav';
@@ -76,6 +77,7 @@ const Header = memo(() => {
           ))}
         <ThemeToggle />
         <UserNav />
+        <ReadmeButton />
       </div>
     </div>
   );
@@ -120,6 +122,7 @@ const Header2 = memo(() => {
           ))}
         <ThemeToggle />
         <UserNav />
+        <ReadmeButton />
       </div>
     </div>
   );

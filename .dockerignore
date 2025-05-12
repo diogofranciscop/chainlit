@@ -14,7 +14,6 @@ venv
 
 .chainlit
 !cypress/e2e/**/*/.chainlit/*
-chainlit.md
 
 cypress/screenshots
 cypress/videos

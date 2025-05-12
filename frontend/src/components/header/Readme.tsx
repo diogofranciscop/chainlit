@@ -1,3 +1,5 @@
+import { FiAlertCircle } from 'react-icons/fi';
+
 import { useConfig } from '@chainlit/react-client';
 
 import { Markdown } from '@/components/Markdown';
@@ -25,7 +27,7 @@ export default function ReadmeButton() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="ghost">
-          <Translator path="navigation.header.readme" />
+          <FiAlertCircle />
         </Button>
       </DialogTrigger>
       <DialogContent className="flex flex-col h-screen w-screen max-w-screen max-h-screen border-none !rounded-none overflow-y-auto">

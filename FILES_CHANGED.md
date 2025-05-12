@@ -13,3 +13,5 @@ The changed/new files in relation to the original [chainlit](https://github.com/
     - frontend/src/router.tsx
 
 So there are possible conflits in those files when updating the repo with a merge from the upstream.
+
+A new dependencie was also added: react-select, react-icon
