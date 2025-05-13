@@ -212,5 +212,8 @@
       "security": "Security",
       "beta": "Beta",
       "best-practice": "Best Practice"
+  },
+  "markdown": {
+    "content": "# 👋 Welcome to the Brain Box platform!!\n## 🤖 O chatbot do grupo SEMAPA\n\nThis is your guide to discover how to use the platform and what its for!\n\nThe platform is simple and has two main pages:\n- 📄 Form page\n- 💬 Chatbot page.\n\n### 📄 Form\n#### What is the form for?\n- 🗃️ It allows you to enter your information into our database.\n  This data will only be used so that other colleagues who may need your help can ask the chatbot, and it can then share your contact info.\n- ✏️ You can edit the form at any time if you need to add or correct information.\n\n### 💬 Chatbot\nThe chatbot is your assistant whenever you need help from a colleague within the SEMAPA group.\n❓ **Don’t know who can help you?** Ask the chatbot and it will tell you who can assist you."
   }
 }

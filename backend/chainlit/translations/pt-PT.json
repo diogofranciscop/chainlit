@@ -212,5 +212,8 @@
         "security": "Segurança",
         "beta": "Beta",
         "best-practice": "Melhores Práticas"
-    }
+    },
+    "markdown": {
+  "content": "# 👋 Bem vindo à plataform Brain Box!\n## 🤖 O chatbot do grupo SEMAPA\n\nEste é o guia para descobrires como utilizar esta plataforma e para que serve!\n\nA plataforma é simples e tens duas páginas principais:\n- 📄 A página do formulário\n- 💬 A página do chatbot.\n\n### 📄 Formulário\n#### Para que serve o formulário?\n- 🗃️ Serve para inserires os teus dados na nossa base de dados.\n  Estes dados serão usados apenas para que outros colaboradores que possam precisar da tua ajuda possam fazer perguntas ao chatbot — e ele poderá fornecer os teus dados.\n- ✏️ Podes editar o formulário a qualquer momento, caso precises de corrigir ou adicionar informações.\n\n### 💬 Chatbot\nO chatbot será o teu auxiliar sempre que precisares da ajuda de algum colaborador dentro do grupo SEMAPA.\n❓ **Não sabes quem te pode ajudar?** Pergunta ao chatbot e ele dir-te-á quem te pode apoiar."
+}
   }

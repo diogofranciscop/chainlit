@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { FiAlertCircle } from 'react-icons/fi';
 
 import { useConfig } from '@chainlit/react-client';
@@ -18,6 +19,7 @@ import { useLayoutMaxWidth } from 'hooks/useLayoutMaxWidth';
 export default function ReadmeButton() {
   const { config } = useConfig();
   const layoutMaxWidth = useLayoutMaxWidth();
+  const { t } = useTranslation();
 
   if (!config?.markdown) {
     return null;
@@ -47,7 +49,7 @@ export default function ReadmeButton() {
             allowHtml={config?.features?.unsafe_allow_html}
             latex={config?.features?.latex}
           >
-            {config.markdown}
+            {t('markdown.content')}
           </Markdown>
         </div>
       </DialogContent>
