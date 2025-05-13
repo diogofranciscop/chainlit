@@ -125,6 +125,7 @@ const Header2 = memo(() => {
         <ThemeToggle />
         <UserNav />
         <ReadmeButton />
+        <SwitchLangButton />
       </div>
     </div>
   );
