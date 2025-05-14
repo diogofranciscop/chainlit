@@ -128,7 +128,7 @@ edit_message = true
 
 [UI]
 # Name of the assistant.
-name = "Assistant"
+name = "Brain Box"
 
 # default_theme = "dark"
 
