@@ -69,10 +69,15 @@ export function Forms() {
             rows={4}
             cols={40}
           />
+
+          <span className="font-normal flex.">
+            <input type="checkbox" className="w-full p-2 border rounded" />
+            Ola
+          </span>
+          <Button type="submit" className="mt-3 mb-7">
+            Submeter
+          </Button>
         </div>
-        <Button type="submit" className="mt-3">
-          Submeter
-        </Button>
       </form>
     </div>
   );
